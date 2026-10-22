@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1C2D"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- SAFE TOP SPACING (Camera / Status Bar) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <!-- IMAGE CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:radius="22dp"
+            android:elevation="12dp"
+            android:backgroundTint="#13293D"
+            android:layout_marginBottom="24dp">
+
+            <!-- ZOOMABLE IMAGE -->
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/imgPainting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:contentDescription="Painting Image" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Painting Title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#E6F1FF"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp" />
+
+        <!-- GOLD ACCENT -->
+        <View
+            android:layout_width="90dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:background="#F5C16C"
+            android:layout_marginBottom="22dp" />
+
+        <!-- DESCRIPTION CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:radius="18dp"
+            android:elevation="6dp"
+            android:backgroundTint="#13293D"
+            android:layout_marginBottom="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#F5C16C"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Painting description goes here"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="6dp"
+                    android:textColor="#CFE3F3" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- PRICE CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:radius="18dp"
+            android:elevation="8dp"
+            android:backgroundTint="#13293D"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#F5C16C" />
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ₹ 0"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="14dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

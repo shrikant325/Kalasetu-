@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F4FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <!-- ╔══════════════════════════════════════════╗
+             ║  HERO HEADER — vibrant violet            ║
+             ╚══════════════════════════════════════════╝ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:paddingTop="52dp"
+            android:paddingBottom="32dp"
+            android:background="#7C3AED">
+
+            <!-- Avatar frame -->
+            <LinearLayout
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#EDE9FE">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:tint="#7C3AED" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Artist Name -->
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artist Name"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:letterSpacing="0.02"
+                android:layout_marginTop="18dp" />
+
+            <!-- Username -->
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@artist"
+                android:textColor="#DDD6FE"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Artist badge -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✦  ARTIST"
+                android:textColor="#7C3AED"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12"
+                android:background="#FFFFFF"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginTop="14dp" />
+
+        </LinearLayout>
+
+        <!-- ╔══════════════════════════════════════════╗
+             ║  STATUS STRIP                            ║
+             ╚══════════════════════════════════════════╝ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="● Active"
+                android:textColor="#22C55E"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="—  Session is live"
+                android:textColor="#AAAAAA"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- ╔══════════════════════════════════════════╗
+             ║  DETAILS CARD                            ║
+             ╚══════════════════════════════════════════╝ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:background="#FFFFFF"
+                android:elevation="3dp"
+                android:layout_marginBottom="20dp">
+
+                <!-- Phone row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="14dp">
+
+                    <LinearLayout
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:gravity="center"
+                        android:background="#EDE9FE"
+                        android:layout_marginEnd="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📞"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone Number"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.06" />
+
+                        <TextView
+                            android:id="@+id/txtPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone:"
+                            android:textColor="#1A0E35"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0EEFF"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- Role row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:gravity="center"
+                        android:background="#EDE9FE"
+                        android:layout_marginEnd="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🎨"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Account Role"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.06" />
+
+                        <TextView
+                            android:id="@+id/txtRole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Role: ARTIST"
+                            android:textColor="#1A0E35"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+
+                    <!-- Role chip -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Artist"
+                        android:textColor="#7C3AED"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:background="#EDE9FE"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ══ SECTION LABEL ══ -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QUICK ACTIONS"
+                android:textColor="#C0C0C0"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.2"
+                android:layout_marginBottom="12dp" />
+
+            <!-- BTN: Upload Painting — PRIMARY -->
+            <Button
+                android:id="@+id/btnUploadPainting"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🖼   Upload Painting"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.04"
+                android:backgroundTint="#7C3AED"
+                android:layout_marginTop="16dp"
+                android:stateListAnimator="@null"
+                android:elevation="6dp" />
+
+            <!-- BTN: My Paintings — SECONDARY -->
+            <Button
+                android:id="@+id/btnMyPaintings"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🎨   My Paintings"
+                android:textColor="#7C3AED"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.04"
+                android:backgroundTint="#EDE9FE"
+                android:layout_marginTop="10dp"
+                android:stateListAnimator="@null"
+                android:elevation="0dp" />
+
+            <!-- BTN: View Orders — SECONDARY -->
+            <Button
+                android:id="@+id/btnViewOrders"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="📦   View Orders"
+                android:textColor="#7C3AED"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.04"
+                android:backgroundTint="#EDE9FE"
+                android:layout_marginTop="10dp"
+                android:stateListAnimator="@null"
+                android:elevation="0dp" />
+
+            <!-- DANGER ZONE LABEL -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="10dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#FFE4E4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  DANGER ZONE  "
+                    android:textColor="#EF4444"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.18" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#FFE4E4" />
+
+            </LinearLayout>
+
+            <!-- BTN: Logout -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="⏻   Logout"
+                android:textColor="#EF4444"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:backgroundTint="#FFF1F1"
+                android:layout_marginTop="20dp"
+                android:stateListAnimator="@null"
+                android:elevation="0dp" />
+
+            <!-- BTN: Delete Account -->
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🗑   Delete Account"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:backgroundTint="#DC2626"
+                android:layout_marginTop="10dp"
+                android:stateListAnimator="@null"
+                android:elevation="4dp" />
+
+            <!-- Bottom spacer -->
+            <View android:layout_width="match_parent" android:layout_height="32dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

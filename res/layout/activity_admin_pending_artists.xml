@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F4FF">
+
+    <!-- SAFE TOP SPACE -->
+    <View
+        android:id="@+id/topSpace"
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <!-- ═══════════════════════════════════════
+         HEADER BLOCK
+    ═══════════════════════════════════════ -->
+
+    <!-- Eyebrow label -->
+    <TextView
+        android:id="@+id/eyebrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topSpace"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="ADMIN PANEL"
+        android:textColor="#A78BFA"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.22" />
+
+    <!-- Main title -->
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eyebrow"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Artists with Pending Paintings"
+        android:textColor="#1A0E35"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/txtSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeader"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="Review and approve submitted works"
+        android:textColor="#A89FC0"
+        android:textSize="13sp" />
+
+    <!-- DIVIDER — 3 part graduated -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="60dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/txtSubtitle"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:background="#7C3AED" />
+
+    <!-- Faded tail of divider -->
+    <View
+        android:id="@+id/dividerTail"
+        android:layout_width="30dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/txtSubtitle"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@id/divider"
+        android:background="#C4B5FD"
+        android:alpha="0.5" />
+
+    <!-- Stats pill — pending count badge -->
+    <TextView
+        android:id="@+id/badgePending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="● Pending Review"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:background="#7C3AED"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp" />
+
+    <!-- ═══════════════════════════════════════
+         RECYCLER
+    ═══════════════════════════════════════ -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPendingArtists"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/badgePending"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:clipToPadding="false" />
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">Kalasetu</string>
+    <string name="choose_role">Choose your role</string>
+
+    <string name="role_user">User</string>
+    <string name="role_user_desc">Explore and buy artworks</string>
+
+    <string name="role_artist">Artist</string>
+    <string name="role_artist_desc">Upload and sell your art</string>
+
+    <string name="role_admin">Admin</string>
+    <string name="role_admin_desc">Manage users, artists and platform data</string>
+
+</resources>

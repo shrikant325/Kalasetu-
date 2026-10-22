@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F4FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <!-- SAFE TOP SPACE -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <!-- ╔══════════════════════════════════════════╗
+             ║  PAGE LABEL BAR                          ║
+             ╚══════════════════════════════════════════╝ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="14dp">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="18dp"
+                android:background="#7C3AED"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PAINTING DETAILS"
+                android:textColor="#7C3AED"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.18" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🖼 Artwork"
+                android:textColor="#7C3AED"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="#EDE9FE"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ╔══════════════════════════════════════════╗
+                 ║  IMAGE CARD (ZOOMABLE)                   ║
+                 ╚══════════════════════════════════════════╝ -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:radius="22dp"
+                android:elevation="12dp"
+                android:backgroundTint="#EDE9FE"
+                android:layout_marginBottom="24dp">
+
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:id="@+id/imgPainting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:contentDescription="Painting Image" />
+
+                <!-- Zoom hint badge -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⊕ Pinch to zoom"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="#AA7C3AED"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="12dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- ╔══════════════════════════════════════════╗
+                 ║  TITLE + DIVIDER                         ║
+                 ╚══════════════════════════════════════════╝ -->
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Painting Title"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#1A0E35"
+                android:textAlignment="center"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Graduated center divider -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="2dp"
+                    android:background="#C4B5FD"
+                    android:alpha="0.6" />
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="3dp"
+                    android:background="#7C3AED" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="2dp"
+                    android:background="#C4B5FD"
+                    android:alpha="0.6" />
+
+            </LinearLayout>
+
+            <!-- ╔══════════════════════════════════════════╗
+                 ║  DESCRIPTION CARD                        ║
+                 ╚══════════════════════════════════════════╝ -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:radius="18dp"
+                android:elevation="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Top accent bar -->
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="3dp"
+                        android:background="#7C3AED"
+                        android:layout_marginBottom="14dp" />
+
+                    <!-- Label row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <LinearLayout
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:gravity="center"
+                            android:background="#EDE9FE"
+                            android:layout_marginEnd="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📝"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Description"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A0E35" />
+
+                    </LinearLayout>
+
+                    <!-- Hairline -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F0EEFF"
+                        android:layout_marginBottom="14dp" />
+
+                    <TextView
+                        android:id="@+id/txtDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Painting description"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="6dp"
+                        android:textColor="#6B6690" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ╔══════════════════════════════════════════╗
+                 ║  PRICE + STATUS CARD                     ║
+                 ╚══════════════════════════════════════════╝ -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:radius="18dp"
+                android:elevation="8dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Price row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <LinearLayout
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:gravity="center"
+                            android:background="#EDE9FE"
+                            android:layout_marginEnd="14dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="💰"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Listed Price"
+                                android:textColor="#AAAAAA"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.06" />
+
+                            <TextView
+                                android:id="@+id/txtPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 0"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:textColor="#7C3AED"
+                                android:layout_marginTop="2dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F0EEFF"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Status row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:gravity="center"
+                            android:background="#EDE9FE"
+                            android:layout_marginEnd="14dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📋"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Approval Status"
+                                android:textColor="#AAAAAA"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.06" />
+
+                            <TextView
+                                android:id="@+id/txtStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status: Pending"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="#F59E0B"
+                                android:layout_marginTop="2dp" />
+
+                        </LinearLayout>
+
+                        <!-- Status chip -->
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bottom spacer -->
+            <View android:layout_width="match_parent" android:layout_height="32dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

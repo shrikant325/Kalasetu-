@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:radius="24dp"
+    android:elevation="6dp"
+    android:backgroundTint="#102A43">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER BAND -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#1A3A5C"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- Painting icon frame -->
+            <LinearLayout
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:background="#F5C16C"
+                android:padding="2dp"
+                android:layout_marginEnd="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="#102A43">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🖼"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/txtPaintingTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Painting Title"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#F5C16C" />
+
+            <!-- Status badge -->
+            <TextView
+                android:id="@+id/txtPaintingStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDING"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#4FC3F7"
+                android:letterSpacing="0.1"
+                android:background="#0D2137"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp" />
+
+        </LinearLayout>
+
+        <!-- BOTTOM ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="16dp"
+                android:background="#F5C16C"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tap to review this submission"
+                android:textColor="#7A9BB5"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="›"
+                android:textColor="#4FC3F7"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎨 Upload Your Artwork"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#4A148C"
+                android:layout_gravity="center"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show your creativity to the world ✨"
+                android:textSize="14sp"
+                android:textColor="#5D4037"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- PAINTING TITLE -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Painting Title"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#B8860B"
+                app:hintTextColor="#4A148C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPaintingTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#212121"
+                    android:textSize="16sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- DESCRIPTION -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:layout_marginTop="14dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#B8860B"
+                app:hintTextColor="#4A148C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="3"
+                    android:gravity="top"
+                    android:textColor="#212121"
+                    android:textSize="15sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- PRICE -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Price (₹)"
+                android:layout_marginTop="14dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#B8860B"
+                app:hintTextColor="#4A148C">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="#212121"
+                    android:textSize="16sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- SELECT IMAGE -->
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🖼️ Select Painting Image"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="#6A1B9A"
+                android:textColor="#FFFFFF"/>
+
+            <!-- IMAGE PREVIEW WITH ZOOM -->
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/imgPreview"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="14dp"
+                android:background="#D7CCC8"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:contentDescription="Painting Preview"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔍 Pinch to zoom and check details"
+                android:textSize="13sp"
+                android:textColor="#5D4037"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center"/>
+
+            <!-- UPLOAD -->
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✨ Upload Painting"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#B8860B"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
